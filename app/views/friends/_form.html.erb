@@ -1,0 +1,58 @@
+<%= form_with(model: friend, local: true) do |form| %>
+  <% if friend.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(friend.errors.count, "error") %> prohibited this friend from being saved:</h2>
+
+      <ul>
+      <% friend.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :friend_name %>
+  </div>
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :friend_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dob %>
+    <%= form.date_field :dob, "data-provide": 'datepicker' %>
+    
+    
+  </div>
+
+  <div class="field">
+    <%= form.label :mobile %>
+    <%= form.text_field :mobile, id: :friend_mobile %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reminder %>
+    <!--<%= form.text_field :reminder, id: :friend_reminder %>-->
+    <%=form.select :reminder, Friend.reminders.keys%>
+  </div>
+
+  <div class="field">
+    <%= form.label :call %>
+    <%= form.check_box :call, id: :friend_call %>
+  </div>
+
+  <div class="field">
+    <%= form.label :message %>
+    <%= form.check_box :message, id: :friend_message %>
+  </div>
+  
+  
+  <%= form.hidden_field :friend_user_id, :value => @friend.user_id %>      
+
+  <div class="actions">
+    <%= form.submit class:'btn btn-success'%>
+  </div>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<br>
+<div class="container" style="border:1px solid black;">
+<p>
+  <strong>Name:</strong>
+  <%= @category.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @category.description %>
+</p>
+
+<%= link_to 'Edit', edit_category_path(@category),:class=>'btn btn-default' %> 
+<%= link_to 'Back', categories_path,:class=>'btn btn-primary' %>
+<br><br>
+</div>

@@ -1,0 +1,29 @@
+.container-fluid {
+    padding: 60px 50px;
+}
+.bg-grey {
+    background-color: #f6f6f6;
+}
+.thumbnail {
+    padding: 5px;
+    border: none;
+    border-radius: 0;
+}
+.thumbnail img {
+    width: 40%;
+    height: 40%;
+    margin-bottom: 5px;
+}
+body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+}
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+.bg-lightgray
+{
+    background-color:rgb(7, 7, 7);
+}
+footer{
+    bottom:0px;
+}
